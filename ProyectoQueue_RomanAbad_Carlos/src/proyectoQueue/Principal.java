@@ -26,6 +26,10 @@ public class Principal {
         
         AgenciaFamoso a = new AgenciaFamoso(lista, "Agencias Roman");
        
+
+
+
+		System.out.println("");
        
         
         System.out.println("Bienvenidos a la inscripcion para pertenecer a la companhia de famosos"+nombreAgencia+" por favor, espere pacientemente su turno, sera atendido");
