@@ -1,11 +1,11 @@
 package proyectoQueue;
 
-import java.util.LinkedList;
+
 import java.util.Queue;
 
 public class AgenciaFamoso {
 
-	private Queue<Famoso> lista = new LinkedList<>();
+	private Queue<Famoso> lista;
 	private String nombre;
 
 	public AgenciaFamoso(Queue<Famoso> lista, String nombre) {
