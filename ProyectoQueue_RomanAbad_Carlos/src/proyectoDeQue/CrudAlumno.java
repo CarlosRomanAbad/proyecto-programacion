@@ -13,6 +13,14 @@ public class CrudAlumno {
 		this.lista = lista;
 	}
 
+	
+	
+	public CrudAlumno(Deque<Alumno> lista) {
+		this.lista = lista;
+	}
+
+
+
 	public Alumno getA() {
 		return a;
 	}
@@ -48,11 +56,22 @@ public class CrudAlumno {
 		for (Alumno alumno : lista) {
 			System.out.println(lista.getFirst());
 		}
+		
 	}
 	
 	public void mostrarUltimoElementoCola() {
 		for (Alumno alumno : lista) {
 			System.out.println(lista.getLast());
 		}
+		
 	}
+
+	public void mostrarElementosCola(){
+		for (Alumno alumno : lista) {
+			if(!lista.isEmpty()){
+				System.out.println(alumno);
+			}
+		}
+	}
+	
 }
