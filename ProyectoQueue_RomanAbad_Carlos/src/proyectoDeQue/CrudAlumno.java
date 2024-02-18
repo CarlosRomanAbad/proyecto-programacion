@@ -73,5 +73,15 @@ public class CrudAlumno {
 			}
 		}
 	}
+
+	public void eleminarUltimoElementoCola(){
+
+		for (Alumno alumno : lista) {
+			
+				lista.removeLast();
+			
+		}
+
+	}
 	
 }

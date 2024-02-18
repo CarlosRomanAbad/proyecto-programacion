@@ -26,6 +26,7 @@ public class Principal {
 
                     ->1. Para añadir a un alumno a la cola
                     ->2. Para mostrar los alumnos añadidos a la cola
+                    ->3. Para eliminar el ultimo elemento de la cola
                     """);
 
             boton1 = Leer.datoInt();
@@ -95,6 +96,12 @@ public class Principal {
                             c.mostrarUltimoElementoCola();
                             break;
                     }
+                    break;
+
+                case 3:
+                    
+                        c.eleminarUltimoElementoCola();//preguntar a angel
+                   
                     break;
             }
 
