@@ -20,14 +20,13 @@ public class Futbolista extends Famoso {
 		this.golesTotales = golesTotales;
 	}
 
-	@Override
-	public String toString() {
-		return "Futbolista [golesTotales=" + golesTotales + "]";
+
+	
+	public String toString(){
+		return super.toString() +
+		"\n Goles Totales: " + golesTotales;
 	}
 
-	
-
-	
 	
 	
 }

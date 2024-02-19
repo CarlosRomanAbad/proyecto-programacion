@@ -25,34 +25,38 @@ public class AgenciaFamoso {
 
 	}
 
-	public void mostrarFilaDeFamosos(int mediaVisualizacionesParaVerificado) {
+	public void mostrarFilaDeFamosos() {
 
 		for (Famoso famoso : lista) {
 			if (lista.peek() != null) {
-				System.out.println(lista);
+				System.out.println(famoso);
 
-				if (lista.element() instanceof Streamer) {
-					((Streamer) lista.element()).mostrarAvisoAgencia(mediaVisualizacionesParaVerificado);
-				}
 			}
 		}
 
 	}
 
 	public void mostrarPrimerClienteDeLaAgencia() {
-		for (Famoso famoso : lista) {
-			if (lista.peek() != null) {
+		
+			if (lista.element() != null) {
 				System.out.println(lista.peek());
 			}
-		}
+		
 	}
 
 	public void borrarFamosoDeLaColaAtendido() {
-
+		//si hasta el final de la lista, despues de recorrerla, no hay ningun nulo, borra al primer elemento de la cola
 		if (lista.peek() != null) {
 			lista.poll();
 		}
 
+	}
+	
+	public void borrarCola(){
+		//si la cola no esta vacia, que elimine todos los elementos
+		if(!lista.isEmpty()){
+			lista.remove();
+		}
 	}
 
 }

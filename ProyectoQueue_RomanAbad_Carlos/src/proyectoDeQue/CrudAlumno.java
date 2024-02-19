@@ -50,7 +50,7 @@ public class CrudAlumno {
 		lista.addLast(a);
 	}
 	
-	//probar si funciona el metodo contains que es parecido a un findbyid
+	
 	
 	public void mostrarPrimerElementoCola() {
 		for (Alumno alumno : lista) {
@@ -75,13 +75,7 @@ public class CrudAlumno {
 	}
 
 	public void eleminarUltimoElementoCola(){
-
-		for (Alumno alumno : lista) {
-			
 				lista.removeLast();
-			
-		}
-
 	}
 	
 }
