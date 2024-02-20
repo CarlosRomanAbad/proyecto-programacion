@@ -100,7 +100,7 @@ public class Principal {
 
                 case 3:
                     
-                        c.eleminarUltimoElementoCola();//preguntar a angel
+                        c.eleminarUltimoElementoCola();
                    
                     break;
             }
