@@ -61,20 +61,15 @@ public class CrudAlumno {
 	public void mostrarElementosCola() {
 		for (Alumno alumno : lista) {
 			// imprime lista si el tamaño de la cola es mayor que 0
-			if (lista.size() != 0) {
+			if (lista.element()!= null) {
 				System.out.println(alumno);
 			}
 		}
 	}
 
-<<<<<<< HEAD
 	public void eleminarUltimoElementoCola(){
 
-				lista.removeLast();
-=======
-	public void eleminarUltimoElementoCola() {
-		lista.pollLast();
->>>>>>> 53ee002d5b3a4fc85b4bf41c671f971e90c9d09f
+				lista.pollLast();
 	}
 
 }

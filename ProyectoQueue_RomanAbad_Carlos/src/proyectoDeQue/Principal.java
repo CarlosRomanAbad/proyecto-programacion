@@ -100,11 +100,7 @@ public class Principal {
 
                 case 3:
                     
-<<<<<<< HEAD
                         c.eleminarUltimoElementoCola();
-=======
-                        c.eleminarUltimoElementoCola();//
->>>>>>> 53ee002d5b3a4fc85b4bf41c671f971e90c9d09f
                    
                     break;
             }

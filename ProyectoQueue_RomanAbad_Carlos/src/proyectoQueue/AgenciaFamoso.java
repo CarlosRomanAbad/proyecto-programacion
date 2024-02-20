@@ -1,6 +1,6 @@
 package proyectoQueue;
 
-
+import java.util.Iterator;
 import java.util.Queue;
 
 public class AgenciaFamoso {
@@ -37,26 +37,45 @@ public class AgenciaFamoso {
 	}
 
 	public void mostrarPrimerClienteDeLaAgencia() {
-		
-			if (lista.element() != null) {
-				System.out.println(lista.peek());
-			}
-		
+
+		if (lista.element() != null) {
+			System.out.println(lista.peek());
+		}
+
 	}
 
 	public void borrarFamosoDeLaColaAtendido() {
-		//si hasta el final de la lista, despues de recorrerla, no hay ningun nulo, borra al primer elemento de la cola
+		// si hasta el final de la lista, despues de recorrerla, no hay ningun nulo,
+		// borra al primer elemento de la cola
 		if (lista.peek() != null) {
 			lista.poll();
+
 		}
 
 	}
-	
-	public void borrarCola(){
-		//si la cola no esta vacia, que elimine todos los elementos
-		if(!lista.isEmpty()){
+
+	public void borrarCola() {
+		// si la cola no esta vacia, que elimine todos los elementos
+		if (!lista.isEmpty()) {
 			lista.remove();
 		}
+	}
+	
+	public Famoso findByDni(String dni) {
+		
+		for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
+			Famoso famoso = (Famoso) iterator.next();
+			if(famoso.getDni().equalsIgnoreCase(dni)) {
+				return famoso;
+			}
+		}
+		return null;
+	}
+	
+	public void borrarClienteSolicitado(String dni) {
+		
+		
+		
 	}
 
 }

@@ -132,13 +132,18 @@ public class Principal {
         		break;
 
 				case 5:
-				//una vez atendido al famoso, pulsando este boton se borrara
-				a.borrarCola();
-
+				
+				System.out.println("Introduzca el dni del Famoso que quiere eliminar de la cola");
+				System.out.println(a.findByDni(Leer.dato()));
+				
+				
+					
 				break;
 
 				default:
 				System.out.println("Opcion inconrrecta");
+				
+				
         	}
 
 			
