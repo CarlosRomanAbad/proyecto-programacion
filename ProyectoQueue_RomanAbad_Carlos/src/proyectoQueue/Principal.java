@@ -44,6 +44,7 @@ public class Principal {
         			2.Para mostrar los famosos de la agencia
         			3.Para mostrar el primer cliente de la cola
         			4.Para borrar al cliente una vez atendido
+					5.???????????????????????????????????????
         			""");
         	boton=Leer.datoInt();
         	
@@ -54,6 +55,7 @@ public class Principal {
 				System.out.println("Por favor, pulse 1 si su famoso es un futbolista, 2 si es influencer , 3 si es streamer");
 				boton2=Leer.datoInt();
 
+				
 				switch (boton2) {
 					case 1:
 					System.out.println("Por favor, introduzca el sueldo fijo que va a tener el Famoso que se va a unir a la Agencia");
@@ -69,7 +71,7 @@ public class Principal {
 					System.err.println("¿Cuántos goles metio la temporada pasada?");
 					golesTotales=Leer.datoDouble();
 
-					a.addFamosoALaCola(new Futbolista(sueldoFijo, nombreFamoso, dni, telefonoContactoFamoso, nombreAgencia, mediaVisualizacionesParaVerificado));
+					a.addFamosoALaCola(new Futbolista(sueldoFijo, nombreFamoso, dni, telefonoContactoFamoso, redesSocialesFamoso, mediaVisualizacionesParaVerificado));
 
 				
 						break;
@@ -87,7 +89,7 @@ public class Principal {
 					redesSocialesFamoso=Leer.dato();
 					System.out.println("Introduzca la cantidad de seguidores que tiene el/la influencer");
 					numeroDeSeguidores=Leer.datoInt();
-					a.addFamosoALaCola( new Influencer(sueldoFijo, nombreFamoso, dni, telefonoContactoFamoso, nombreAgencia, numeroDeSeguidores));
+					a.addFamosoALaCola( new Influencer(sueldoFijo, nombreFamoso, dni, telefonoContactoFamoso, redesSocialesFamoso, numeroDeSeguidores));
 
 					break;
 
@@ -108,26 +110,38 @@ public class Principal {
 					System.out.println("¿Y cuántos seguidores?");
 					numeroDeSeguidores=Leer.datoInt();
 
-					a.addFamosoALaCola(new Streamer(sueldoFijo, nombreFamoso, dni, telefonoContactoFamoso, nombreAgencia, mediaVisualizacionesParaVerificado, numeroDeSeguidores));
+					a.addFamosoALaCola(new Streamer(sueldoFijo, nombreFamoso, dni, telefonoContactoFamoso, redesSocialesFamoso, mediaVisualizacionesParaVerificado, numeroDeSeguidores));
 					break;
 				}
 
-        	
+        	break;
         	case 2:
         		
-        		a.mostrarFilaDeFamosos(mediaVisualizacionesParaVerificado);
+				//mostrar todos los famosos anhadidos
+        		a.mostrarFilaDeFamosos();
         		break;
         		
         	case 3:
-        		
+        		//muestra unicamente al primer famoso de la agencia
         		a.mostrarPrimerClienteDeLaAgencia();
         		break;
         		
         	case 4:
-        		
+        		//una vez atendido al famoso, pulsando este boton se borrara
         		a.borrarFamosoDeLaColaAtendido();
-        		
+        		break;
+
+				case 5:
+				//una vez atendido al famoso, pulsando este boton se borrara
+				a.borrarCola();
+
+				break;
+
+				default:
+				System.out.println("Opcion inconrrecta");
         	}
+
+			
         	
         }while (boton!=cero);
       

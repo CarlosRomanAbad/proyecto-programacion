@@ -20,11 +20,10 @@ public class Influencer extends Famoso {
 		this.numeroDeSeguidores = numeroDeSeguidores;
 	}
 
-	@Override
 	public String toString() {
-		return "Influencer [numeroDeSeguidores=" + numeroDeSeguidores + "]";
-	}
-	
+        return super.toString() +
+                "\nNumero de Seguidores: " + numeroDeSeguidores;
+    }
 	
 	
 

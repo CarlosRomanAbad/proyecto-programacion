@@ -28,16 +28,12 @@ public class Streamer extends Famoso {
 		this.numeroSeguidores = numeroSeguidores;
 	}
 
-	@Override
 	public String toString() {
-		return "Streamer [mediaVisualizaciones=" + mediaVisualizaciones + ", numeroSeguidores=" + numeroSeguidores
-				+ "]";
-	}
+        return super.toString() +
+                "\nMedia Visualizaciones: " + mediaVisualizaciones +
+                "\nNumero Seguidores: " + numeroSeguidores;
+    }
 
 	
-	public void mostrarAvisoAgencia(int requisitoAgencia) {
-		if (numeroSeguidores + mediaVisualizaciones > requisitoAgencia) {
-			System.out.println("¡Enhorabuena, desde ahora pertenece a nuestra familia!");
-		}
-	}
+	
 }
