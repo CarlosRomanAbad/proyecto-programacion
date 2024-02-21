@@ -74,7 +74,9 @@ public class AgenciaFamoso {
 	
 	public void borrarClienteSolicitado(String dni) {
 		
+		Famoso f = findByDni(dni);
 		
+		lista.remove(f);
 		
 	}
 

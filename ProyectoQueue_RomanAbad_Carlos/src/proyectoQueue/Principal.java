@@ -44,7 +44,9 @@ public class Principal {
         			2.Para mostrar los famosos de la agencia
         			3.Para mostrar el primer cliente de la cola
         			4.Para borrar al cliente una vez atendido
-					5.???????????????????????????????????????
+        			5.Borrar al cliente solicitado
+        			
+					
         			""");
         	boton=Leer.datoInt();
         	
@@ -134,7 +136,7 @@ public class Principal {
 				case 5:
 				
 				System.out.println("Introduzca el dni del Famoso que quiere eliminar de la cola");
-				System.out.println(a.findByDni(Leer.dato()));
+				a.borrarClienteSolicitado(Leer.dato());
 				
 				
 					
